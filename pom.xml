@@ -9,12 +9,29 @@
     <name>first-spring-app</name>
     <description>Demo project for Spring Boot</description>
     <properties>
+        <slf4jVersion>1.6.1</slf4jVersion>
+        <spring.version>5.1.5.RELEASE</spring.version>
         <maven.complier.sourse>1.8</maven.complier.sourse>
         <maven.compiler.target>1.8</maven.compiler.target>
         <java.version>11</java.version>
-        <slf4jVersion>1.6.1</slf4jVersion>
-        <spring.version>5.1.5.RELEASE</spring.version>
     </properties>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -54,4 +71,7 @@
             <version>${spring.version}</version>
         </dependency>
     </dependencies>
+
+
 </project>
+
