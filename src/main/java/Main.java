@@ -13,5 +13,10 @@ public class Main {
         IGreetingService kittyService = (HelloKittyService) ctx.getBean("helloKittyService");
         kittyService.sendGreeting();
 
+        //use of a bean with ref
+        System.out.println();
+        Application application = (Application) ctx.getBean("application");
+        application.start();
+
     }
 }
