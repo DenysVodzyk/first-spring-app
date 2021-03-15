@@ -10,4 +10,8 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <bean id="helloKittyService" class="service.HelloKittyService"/>
 
+    <bean name="application" class="Application">
+        <constructor-arg ref="helloWorldService"/>
+    </bean>
+
 </beans>
